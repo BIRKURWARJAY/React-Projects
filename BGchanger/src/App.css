@@ -1,0 +1,22 @@
+.parDiv{
+    position: fixed;
+    bottom:100px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.btnDiv{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: aliceblue;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+.btnDiv button{
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
