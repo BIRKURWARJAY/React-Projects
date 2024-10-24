@@ -16,12 +16,12 @@ function App() {
     if (numAllowed) charAcc += "0123456789";
     if (charAllowed) charAcc += "!@#$%^&*()_+|}{';:?/.><";
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    pass = "";
+    let temp = "";
 
     for (let i = 0; i < length; i++) {
-      pass += charAcc.charAt(Math.floor(Math.random() * charAcc.length));
+      temp += charAcc.charAt(Math.floor(Math.random() * charAcc.length));
     }
-    setPass(pass)
+    setPass(temp)
 
   }, [numAllowed, charAllowed, length]);
 
@@ -34,7 +34,7 @@ function App() {
 
   useEffect(() => {
     passGenerator();
-    copyBtn.current.innerText = "Copy"
+    copyBtn.current.innerText = "Copy"    
   }, [length, numAllowed, charAllowed, passGenerator]);
 
   return (
